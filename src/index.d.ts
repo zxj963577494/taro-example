@@ -1,23 +1,27 @@
 /**
  * 全局状态
  */
-interface IStore {
+declare interface IStore {
   loading: {
     effects: string[]
   }
   example: IExampleStore
 }
 
-interface IExampleStore {
+declare interface IExampleStore {
   count: number
 }
 
 /**
  * dva异步方法调用
  */
-type IDispatch = (object: { type: string; payload?: object; callback?: (res: any) => void }) => void
+declare type IDispatch = (object: {
+  type: string
+  payload?: object
+  callback?: (res: any) => void
+}) => void
 
-interface IEffectsAction {
+declare interface IEffectsAction {
   //参数
   payload?: any
   //回调

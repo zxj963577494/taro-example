@@ -11,6 +11,9 @@ declare module '*.scss'
 declare module '*.sass'
 declare module '*.styl'
 
+
+declare var wx: any;
+
 declare global {
   namespace JSX {
     interface IntrinsicElements {

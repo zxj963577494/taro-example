@@ -559,7 +559,15 @@
   resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.9.tgz#f2d14df87b0739041bc53a7d75e3d77d726a3ec0"
   integrity sha1-8tFN+HsHOQQbxTp9dePXfXJqPsA=
 
-"@types/react@^16.4.6", "@types/react@^16.7.3":
+"@types/react-redux@^7.0.1":
+  version "7.0.1"
+  resolved "http://registry.npm.taobao.org/@types/react-redux/download/@types/react-redux-7.0.1.tgz#9dd2503be7a9861c5a092bf1c5050b7ade4dc62e"
+  integrity sha1-ndJQO+ephhxaCSvxxQULet5Nxi4=
+  dependencies:
+    "@types/react" "*"
+    redux "^4.0.0"
+
+"@types/react@*", "@types/react@^16.4.6", "@types/react@^16.7.3":
   version "16.8.4"
   resolved "http://registry.npm.taobao.org/@types/react/download/@types/react-16.8.4.tgz#134307f5266e866d5e7c25e47f31f9abd5b2ea34"
   integrity sha1-E0MH9SZuhm1efCXkfzH5q9Wy6jQ=
@@ -7757,7 +7765,7 @@ redux@^3.7.1:
     loose-envify "^1.1.0"
     symbol-observable "^1.0.3"
 
-redux@^4.0.1:
+redux@^4.0.0, redux@^4.0.1:
   version "4.0.1"
   resolved "http://registry.npm.taobao.org/redux/download/redux-4.0.1.tgz#436cae6cc40fbe4727689d7c8fae44808f1bfef5"
   integrity sha1-Q2yubMQPvkcnaJ18j65EgI8b/vU=
@@ -9219,10 +9227,10 @@ typedarray@^0.0.6:
   resolved "http://registry.npm.taobao.org/typedarray/download/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.0.1:
-  version "3.3.3"
-  resolved "http://registry.npm.taobao.org/typescript/download/typescript-3.3.3.tgz#f1657fc7daa27e1a8930758ace9ae8da31403221"
-  integrity sha1-8WV/x9qifhqJMHWKzpro2jFAMiE=
+typescript@^3.3.1:
+  version "3.3.3333"
+  resolved "http://registry.npm.taobao.org/typescript/download/typescript-3.3.3333.tgz#171b2c5af66c59e9431199117a3bcadc66fdcfd6"
+  integrity sha1-FxssWvZsWelDEZkRejvK3Gb9z9Y=
 
 uglify-es@^3.3.4:
   version "3.3.9"
