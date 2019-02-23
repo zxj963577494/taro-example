@@ -1,7 +1,7 @@
-import { queryExamples } from '@services/example'
+import { queryHomes } from '@services/home'
 
-const example = {
-  namespace: 'example',
+const home = {
+  namespace: 'home',
 
   state: {
     count: 1,
@@ -10,7 +10,7 @@ const example = {
   effects: {
     *fetch(action: IEffectsAction, { call, put }) {
       const { payload, callback } = action
-      const response = yield call(queryExamples, payload)
+      const response = yield call(queryHomes, payload)
       yield put({
         type: 'save',
         payload: response,
@@ -28,4 +28,4 @@ const example = {
   },
 }
 
-export default example
+export default home

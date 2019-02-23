@@ -1,5 +1,5 @@
 export type StoreState = {
-  example: IExampleStore
+  home: IHomestore
   loading: boolean
 }
 

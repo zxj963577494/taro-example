@@ -2,10 +2,10 @@ import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { connect } from '@tarojs/redux'
 import { View, Image } from '@tarojs/components'
-import { Props, State } from '@pages/index/type'
+import { Props, State } from '@pages/home/type'
 import './index.less'
 
-class IndexPage extends Component<Props, State> {
+class HomePage extends Component<Props, State> {
   config: Config = {
     navigationBarTitleText: '首页',
   }
@@ -31,12 +31,12 @@ class IndexPage extends Component<Props, State> {
   componentDidHide() {}
 
   render() {
-    const { example, loading } = this.props
+    const { home, loading } = this.props
     const { isFetched } = this.state
     return (
       <View className='at-article'>
         <View className='at-article__content'>加载中:{loading ? '是' : '否'}</View>
-        <View className='at-article__content'>默认值:{example.count}</View>
+        <View className='at-article__content'>默认值:{home.count}</View>
         <View className='at-article__content'>是否异步请求:{isFetched ? '是' : '否'}</View>
         <View className='at-article__h1'>这是一级标题这是一级标题</View>
         <View className='at-article__info'>2017-05-07&nbsp;&nbsp;&nbsp;这是作者</View>
@@ -62,18 +62,18 @@ class IndexPage extends Component<Props, State> {
 }
 
 const mapStateToProps = (state: IStore) => ({
-  example: state.example,
-  loading: state.loading.effects['example/fetch'],
+  home: state.home,
+  loading: state.loading.effects['home/fetch'],
 })
 
 const mapDispatchToProps = (dispatch: IDispatch) => ({
   getData: () =>
     dispatch({
-      type: 'example/fetch',
+      type: 'home/fetch',
     }),
 })
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(IndexPage) as ComponentClass
+)(HomePage) as ComponentClass

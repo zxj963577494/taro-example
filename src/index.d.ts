@@ -5,10 +5,10 @@ declare interface IStore {
   loading: {
     effects: string[]
   }
-  example: IExampleStore
+  home: IHomestore
 }
 
-declare interface IExampleStore {
+declare interface IHomestore {
   count: number
 }
 

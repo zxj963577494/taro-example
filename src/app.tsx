@@ -1,10 +1,10 @@
+import '@tarojs/async-await'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 import dva from '@utils/dva'
-import '@tarojs/async-await'
 import 'taro-ui/dist/style/index.scss'
 import models from '@models/index'
-import IndexPage from '@pages/index'
+import HomePage from '@pages/home/'
 import './app.less'
 
 const dvaApp = dva.createApp({
@@ -16,7 +16,7 @@ const store = dvaApp.getStore()
 
 class App extends Component {
   config: Config = {
-    pages: ['pages/index/index'],
+    pages: ['pages/home/index'],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <IndexPage />
+        <HomePage />
       </Provider>
     )
   }

@@ -1,3 +1,3 @@
-import example from '@models/example'
+import home from '@models/home'
 
-export default [example]
+export default [home]
