@@ -1,15 +1,16 @@
+import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { connect } from '@tarojs/redux'
 import { View, Image } from '@tarojs/components'
-import { IProps, IState } from '@pages/index/type'
+import { Props, State } from '@pages/index/type'
 import './index.less'
 
-class IndexPage extends Component<IProps, IState> {
+class IndexPage extends Component<Props, State> {
   config: Config = {
     navigationBarTitleText: '首页',
   }
 
-  readonly state: IState = {
+  readonly state: State = {
     isFetched: false,
   }
 
@@ -75,4 +76,4 @@ const mapDispatchToProps = (dispatch: IDispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(IndexPage)
+)(IndexPage) as ComponentClass

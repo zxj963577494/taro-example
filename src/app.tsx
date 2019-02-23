@@ -1,7 +1,7 @@
-import '@tarojs/async-await'
 import Taro, { Component, Config } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 import dva from '@utils/dva'
+import '@tarojs/async-await'
 import 'taro-ui/dist/style/index.scss'
 import models from '@models/index'
 import IndexPage from '@pages/index'

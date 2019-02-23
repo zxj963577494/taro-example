@@ -1,16 +1,16 @@
-export type IStoreState = {
+export type StoreState = {
   example: IExampleStore
   loading: boolean
 }
 
-export type IStoreDispatch = {
+export type StoreDispatch = {
   getData: () => any
 }
 
-export type IOwnProps = {}
+export type OwnProps = {}
 
-export type IProps = IStoreState & IStoreDispatch & IOwnProps
+export type Props = StoreState & StoreDispatch & OwnProps
 
-export type IState = {
+export type State = {
   readonly isFetched: boolean
 }
